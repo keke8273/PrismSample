@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/QBR.AnalyzerManagerModule;component/Resources/Assets/Assets.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/QBR.AnalyzerManagerModule;component/Resources/ValueConverters/ValueConverters.xaml" />
+        <!--<ResourceDictionary Source="pack://application:,,,/QBR.AnalyzerManagerModule;component/Resources/DataTemplates/DataTemplates.xaml" />-->
+        <ResourceDictionary Source="pack://application:,,,/QBR.AnalyzerManagerModule;component/Resources/ControlTemplate/ResultExpanderTemplate.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,5 @@
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBDataLinkLayer\bin\Release\DataLinkLayer.dll
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBDataLinkLayer\bin\Release\DataLinkLayer.pdb
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBDataLinkLayer\obj\Release\DataLinkLayer.dll
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBDataLinkLayer\obj\Release\DataLinkLayer.pdb
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBDataLinkLayer\obj\Release\USBDataLinkLayer.csprojResolveAssemblyReference.cache

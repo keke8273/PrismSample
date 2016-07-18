@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Assets-->
+    <BitmapImage x:Key="ProteusMeterIcon" UriSource="ProteusMeterIcon.png"/>
+    <BitmapImage x:Key="RestartTestIcon" UriSource="RestartTestIcon.png"/>
+</ResourceDictionary>

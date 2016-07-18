@@ -1,0 +1,15 @@
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\obj\Debug\ResolveAssemblyReference.cache
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\CommsPlugin.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\CommsPlugin.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\DataLinkLayer.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\DataLinkLayer.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\obj\Debug\USBCommsPlugin.csprojResolveAssemblyReference.cache
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\obj\Debug\CommsPlugin.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\obj\Debug\CommsPlugin.pdb
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\CommsPlugin.dll
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\CommsPlugin.pdb
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\DataLinkLayer.dll
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\bin\Debug\DataLinkLayer.pdb
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\obj\Debug\USBCommsPlugin.csprojResolveAssemblyReference.cache
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\obj\Debug\CommsPlugin.dll
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBCommsPlugin\obj\Debug\CommsPlugin.pdb

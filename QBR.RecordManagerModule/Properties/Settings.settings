@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="QBR.RecordManagerModule.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProteusSamplingInterval" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0.02048</Value>
+    </Setting>
+    <Setting Name="ProteusStartTime" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">-1.00352</Value>
+    </Setting>
+    <Setting Name="CryptoProvider" Type="System.String" Scope="User">
+      <Value Profile="(Default)">System.Security.Cryptography.MD5CryptoServiceProvider</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

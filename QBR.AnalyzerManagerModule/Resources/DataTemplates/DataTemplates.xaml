@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:notifications="clr-namespace:QBR.AnalyzerManagerModule.Models.Notifications"
+                    xmlns:views="clr-namespace:QBR.AnalyzerManagerModule.Views">
+    <DataTemplate DataType="{x:Type notifications:TestResultNotification}">
+        <views:TestResultPopup/>
+    </DataTemplate>
+</ResourceDictionary>

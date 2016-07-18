@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="QBR.AnalyzerManagerModule.Views.TestResultPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="75" d:DesignWidth="200">
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="DarkGray"></Border>
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="DarkGray"></Border>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TestResultFieldNameStyle}">CT:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource TestResultFieldNameStyle}">PF:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource TestResultFieldNameStyle}">DF:</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource TestResultFieldNameStyle}">OBC:</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource TestResultFieldNameStyle}">Imin:</TextBlock>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding ClotTime}" Style="{StaticResource TestResultValueStyle}"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding PartialFill}" Style="{StaticResource TestResultValueStyle}"></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding DoulbeFill}" Style="{StaticResource TestResultValueStyle}"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding OBCValue}" Style="{StaticResource TestResultValueStyle}"></TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding MinimumCurrent}" Style="{StaticResource TestResultValueStyle}"></TextBlock>
+    </Grid>
+</UserControl>

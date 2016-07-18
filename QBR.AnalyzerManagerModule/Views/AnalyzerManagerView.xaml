@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="QBR.AnalyzerManagerModule.Views.AnalyzerManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:QBR.AnalyzerManagerModule.ViewModels"
+             xmlns:views="clr-namespace:QBR.AnalyzerManagerModule.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:interactionRequest="http://www.codeplex.com/prism"
+             xmlns:triggerActions="clr-namespace:QBR.Infrastructure.TriggerActions;assembly=QBR.Infrastructure"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="350">
+    
+    <UserControl.Resources>
+        <viewModels:AnalyzerManagerViewModel x:Key="DesignViewModel">
+            <viewModels:AnalyzerManagerViewModel.AnalyzerViewModels>
+                <viewModels:AnalyzerViewModel>
+                    <viewModels:AnalyzerViewModel.AnalyzerID>PP100001D</viewModels:AnalyzerViewModel.AnalyzerID>
+                    <viewModels:AnalyzerViewModel.AnalyzerStatus>AwaitSampleApplication</viewModels:AnalyzerViewModel.AnalyzerStatus>
+                    <viewModels:AnalyzerViewModel.AnalyzerType>PRO</viewModels:AnalyzerViewModel.AnalyzerType>
+                </viewModels:AnalyzerViewModel>
+                <viewModels:AnalyzerViewModel>
+                    <viewModels:AnalyzerViewModel.AnalyzerID>PP100002D</viewModels:AnalyzerViewModel.AnalyzerID>
+                    <viewModels:AnalyzerViewModel.AnalyzerStatus>AwaitSampleApplication</viewModels:AnalyzerViewModel.AnalyzerStatus>
+                    <viewModels:AnalyzerViewModel.AnalyzerType>PRO</viewModels:AnalyzerViewModel.AnalyzerType>
+                </viewModels:AnalyzerViewModel>
+            </viewModels:AnalyzerManagerViewModel.AnalyzerViewModels>
+        </viewModels:AnalyzerManagerViewModel>
+    </UserControl.Resources>
+
+    <Grid d:DataContext = "{Binding Source={StaticResource DesignViewModel}}">
+        <i:Interaction.Behaviors>
+            <ei:DataStateBehavior Binding="{Binding ShowAnalyzerStatus}" Value="True" TrueState="ShowAnalyzerStatus" FalseState="HideAnalyzerStatus"></ei:DataStateBehavior>
+        </i:Interaction.Behaviors>
+
+        <i:Interaction.Triggers>
+            <interactionRequest:InteractionRequestTrigger SourceObject="{Binding NotificationRequest}">
+                <triggerActions:PopupWindowAction IsModal="True" CenterOverAssociatedObject="True"></triggerActions:PopupWindowAction>
+            </interactionRequest:InteractionRequestTrigger>
+            <!--<i:EventTrigger EventName="PreviewMouseLeftButtonDown">
+                <i:InvokeCommandAction Command="{Binding ClearCommand}"></i:InvokeCommandAction>
+            </i:EventTrigger>-->
+        </i:Interaction.Triggers>
+        
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualizatonStates">
+                <VisualState Name="ShowAnalyzerStatus">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="AnalyzerStatus">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="HideAnalyzerStatus">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="AnalyzerStatus">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Border Background="White"></Border>
+
+        <ItemsControl ItemsSource="{Binding AnalyzerViewModels}" x:Name="AnalyzerStatus" Visibility="Collapsed">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" ItemWidth="150"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style>
+                    <Setter Property="FrameworkElement.Margin" Value="5"></Setter>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <views:AnalyzerView></views:AnalyzerView>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</UserControl>

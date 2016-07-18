@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="QBR.TestManagerModule.Views.TestProgressView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:views="clr-namespace:QBR.TestManagerModule.Views"
+             xmlns:commands="http://www.codeplex.com/prism"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="600" >
+    <UserControl.InputBindings>
+        <KeyBinding Command="{Binding StartTestCommand}" Key="F1"/>
+        <KeyBinding Command="{Binding AbortTestCommand}" Key="Escape"/>
+    </UserControl.InputBindings>
+    
+    <Grid HorizontalAlignment="Center">
+        <i:Interaction.Behaviors>
+            <ei:DataStateBehavior Binding="{Binding ShowTestProgress}" Value="True" TrueState="ShowTestProgress" FalseState="HideTestProgress"></ei:DataStateBehavior>
+        </i:Interaction.Behaviors>
+        
+        <VisualStateManager.VisualStateGroups>
+            
+            <VisualStateGroup x:Name="VisualizatonStats">
+                <!--<VisualStateGroup.Transitions>
+                    <VisualTransition From="ShowTestProgress" To="HideTestProgress">
+                        <Storyboard SpeedRatio="2">
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="TestProgress">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="Collapsed"/>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+
+                    <VisualTransition From="HideTestProgress" To="ShowTestProgress">
+                        <Storyboard SpeedRatio="2">
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="TestProgress">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:0.5" Value="Visible"/>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualTransition>
+
+                </VisualStateGroup.Transitions>-->
+
+                <VisualState x:Name="ShowTestProgress">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="TestProgress">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="HideTestProgress">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Visibility)" Storyboard.TargetName="TestProgress">
+                            <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid Name="TestProgress">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Style="{StaticResource ConfirmButtonStyle}" commands:Click.Command="{Binding StartTestCommand}">Start Test (F1)</Button>
+            <Button Grid.Column="1" Style="{StaticResource ConfirmButtonStyle}" commands:Click.Command="{Binding AbortTestCommand}">Abort Test (Esc)</Button>
+        </Grid>
+    </Grid>
+</UserControl>

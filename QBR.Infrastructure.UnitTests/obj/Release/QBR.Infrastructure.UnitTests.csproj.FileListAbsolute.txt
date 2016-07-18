@@ -1,0 +1,16 @@
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\QBR.Infrastructure.UnitTests.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\QBR.Infrastructure.UnitTests.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Expression.Interactions.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.Prism.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.Prism.Interactivity.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\QBR.Infrastructure.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\System.Windows.Interactivity.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\QBR.Infrastructure.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.Prism.xml
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.Prism.Interactivity.xml
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.ServiceLocation.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\bin\Release\Microsoft.Practices.ServiceLocation.xml
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\obj\Release\QBR.Infrastructure.UnitTests.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\obj\Release\QBR.Infrastructure.UnitTests.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\QBR.Infrastructure.UnitTests\obj\Release\QBR.Infrastructure.UnitTests.csprojResolveAssemblyReference.cache

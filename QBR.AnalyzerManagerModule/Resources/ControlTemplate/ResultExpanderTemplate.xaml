@@ -1,0 +1,108 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTemplate TargetType="Expander" x:Key="ResultExpanderTemplate">
+        <ControlTemplate.Resources>
+            <SolidColorBrush x:Key="HighlightBrush" Color="DodgerBlue"></SolidColorBrush>
+            <Storyboard x:Key="Timeline1">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:0.15" Storyboard.TargetName="Content" Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:0.15" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="Timeline2">
+                <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.25" Storyboard.TargetName="Content" Storyboard.TargetProperty="(FrameworkElement.LayoutTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                    <SplineDoubleKeyFrame KeyTime="00:00:0.25" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="MouseOverStoryboard">
+                <ColorAnimationUsingKeyFrames  Storyboard.TargetName="Triangle" Storyboard.TargetProperty="(Path.Stroke).Color" Duration="0:0:0.1" >
+                    <LinearColorKeyFrame KeyTime="0:0:0.1"
+                                                 Value="DodgerBlue"/>
+                </ColorAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="CheckStoryboard">
+                <!--<ColorAnimationUsingKeyFrames  Storyboard.TargetName="Triangle" Storyboard.TargetProperty="(Path.Fill).Color" Duration="0:0:0.1" >
+                    <LinearColorKeyFrame KeyTime="0:0:0.1"
+                                                 Value="Black">
+                    </LinearColorKeyFrame>
+                </ColorAnimationUsingKeyFrames>-->
+                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data)" Storyboard.TargetName="Triangle">
+                    <DiscreteObjectKeyFrame KeyTime="0">
+                        <DiscreteObjectKeyFrame.Value>
+                            <Geometry>
+                                M 1 3 L 6 8 L 11 3
+                            </Geometry>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                </ObjectAnimationUsingKeyFrames>
+                <!--<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data)" Storyboard.TargetName="TriangleGlow">
+                    <DiscreteObjectKeyFrame KeyTime="0">
+                        <DiscreteObjectKeyFrame.Value>
+                            <Geometry>
+                                M 2 11 H 10 V 2
+                            </Geometry>
+                        </DiscreteObjectKeyFrame.Value>
+                    </DiscreteObjectKeyFrame>
+                </ObjectAnimationUsingKeyFrames>-->
+            </Storyboard>
+        </ControlTemplate.Resources>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Name="HeaderBorder" Grid.Row="0" Focusable="True" BorderThickness="0,0,0,1" Background="DarkGray" Margin="0" CornerRadius="2,2,0,0">
+                <Grid VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Name ="Header" Grid.Column="0" Text="{TemplateBinding Header}" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="White"/>
+                    <ToggleButton Grid.Column="1" IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}">
+                        <ToggleButton.Template>
+                            <ControlTemplate TargetType="ToggleButton">
+                                <Border Name="ToggleBoarder" Width="12" Height="12" Background="Transparent">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="MouseOver">
+                                                <StaticResource ResourceKey="MouseOverStoryboard"></StaticResource>
+                                            </VisualState>
+                                            <VisualState x:Name="Normal"></VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="CheckStates">
+                                            <VisualState x:Name="Checked">
+                                                <StaticResource ResourceKey="CheckStoryboard"></StaticResource>
+                                            </VisualState>
+                                            <VisualState x:Name="Unchecked"></VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Grid>
+                                        <Path x:Name="Triangle" Fill="Transparent" Data="M 1 7 L 6 3 L 11 7" Stroke="White" StrokeThickness="2"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </ToggleButton.Template>
+                    </ToggleButton>
+                </Grid>
+            </Border>
+            <ContentPresenter Name="Content" Grid.Row="1" Visibility="Visible">
+                <ContentPresenter.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="0"/>
+                    </TransformGroup>
+                </ContentPresenter.LayoutTransform>
+            </ContentPresenter>
+        </Grid>
+        
+        <!--Triggers-->
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsExpanded" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard Storyboard="{StaticResource Timeline1}"/>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard Storyboard="{StaticResource Timeline2}"/>
+                </Trigger.ExitActions>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

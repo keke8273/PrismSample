@@ -1,0 +1,7 @@
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\bin\Release\CommsPlugin.dll
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\bin\Release\CommsPlugin.pdb
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\bin\Release\DataLinkLayer.dll
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\bin\Release\DataLinkLayer.pdb
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\obj\Release\USBCommsPlugin.csprojResolveAssemblyReference.cache
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\obj\Release\CommsPlugin.dll
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBCommsPlugin\obj\Release\CommsPlugin.pdb

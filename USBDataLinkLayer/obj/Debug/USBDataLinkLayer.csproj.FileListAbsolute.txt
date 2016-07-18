@@ -1,0 +1,9 @@
+C:\fliu\TET\trunk\ProteusTransientExtractionTool\USBDataLinkLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\bin\Debug\DataLinkLayer.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\bin\Debug\DataLinkLayer.pdb
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\obj\Debug\DataLinkLayer.dll
+C:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\obj\Debug\DataLinkLayer.pdb
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\bin\Debug\DataLinkLayer.dll
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\bin\Debug\DataLinkLayer.pdb
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\obj\Debug\DataLinkLayer.dll
+F:\fliu\QCBatchReleaseTool\trunk\Implementation\QBR\USBDataLinkLayer\obj\Debug\DataLinkLayer.pdb
